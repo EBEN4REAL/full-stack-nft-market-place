@@ -6,9 +6,10 @@ import formatPrice from "../utils/formatPrice"
 
 // Type for the NFT data
 interface NFTBoxProps {
-    tokenId: string
-    contractAddress: string
-    price: string
+    tokenId?: string
+    contractAddress?: string
+    price?: string;
+    seller?: string;
 }
 
 export default function NFTBox({ tokenId, contractAddress, price }: NFTBoxProps) {
@@ -89,7 +90,7 @@ export default function NFTBox({ tokenId, contractAddress, price }: NFTBoxProps)
                 <div className="flex justify-between items-center mb-2">
                     <h3 className="font-bold">Token #{tokenId}</h3>
                     <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                        {formatPrice(price)}
+                        {price && formatPrice(price)}
                     </span>
                 </div>
                 <p className="text-sm text-gray-600" title={contractAddress}>
