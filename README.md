@@ -1,6 +1,6 @@
 # NFT Marketplace 
 
-The final project for the Cyfrin Web3 Full Stack crash course, where we introduce:
+Features:
 
 1. Indexing (rindexer)
 2. Fleek CLI
